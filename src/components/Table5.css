@@ -1,0 +1,41 @@
+/* Table5.css */
+
+.header-container {
+  background-color:palevioletred;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .back-container {
+  margin-right: 10px;
+  margin-right: auto;
+} */
+.back-container {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+
+.dropdown-container {
+  background-color: grey;
+  margin-left: 10px;
+}
+
+.heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.heading-container {
+  background-color: palegoldenrod;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

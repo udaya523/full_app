@@ -194,7 +194,7 @@
 // export default Login;
 
 // login.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Login.css';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -202,6 +202,11 @@ const Login = ({ signupData }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+
+  useEffect(() => {
+    setUsername("");
+    setPassword("");
+  }, []);
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -213,16 +218,18 @@ const Login = ({ signupData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const matchedUser = signupData.find((user) => user.username === username && user.password === password);
-    if (matchedUser) {
+    // const matchedUser = signupData.find((user) => user.username === username && user.password === password);
+    
+    if (username === "admin" && password === "admin") {
       console.log('Login successful');
       history.push('/home');
     } else {
       console.log('Invalid username or password');
     }
   };
-
-  const isFormValid = username && password;
+  
+  const isFormValid = username === "admin" && password === "admin"; // Since we are hardcoding the username and password, the form will always be considered valid.
+  
 
   return (
     <div>

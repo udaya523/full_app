@@ -92,8 +92,7 @@ const Signup = ({ handleSignup }) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState('');
-  const history = useHistory()
-
+  const history = useHistory();
   
 
   const handleSubmit = (event) => {
@@ -118,10 +117,6 @@ const Signup = ({ handleSignup }) => {
       password,
     };
     handleSignup(signupData);
-
-
-
-
     // Reset form fields
     setUsername('');
     setPassword('');

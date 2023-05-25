@@ -1,11 +1,12 @@
 import React from 'react';
-import logos from "../images/logos.png";
+import karnataka3 from "../images/karnataka3.png";
 function Home() {
   return (
     <div>
+      <br/>
+      <br/>
       <center>
-      <h1>Welcome to Home</h1>
-      <img src={logos} alt="Profile " />
+      <img src={karnataka3} alt="Profile" style={{ maxWidth: "30%" }} />
       </ center>
     </div>
   );
